@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$tablet: "577px";
+$desktop: "992px";
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "filter"
+    "main"
+    "footer";
+  height: 100vh;
+
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+
+    height: 60 px;
+    background-color: darkblue;
+  }
+
+  .filter {
+    grid-area: filter;
+    background-color: #ef1f46;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
