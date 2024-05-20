@@ -15,26 +15,93 @@ body {
     "main"
     "footer";
   height: 100vh;
+  grid-template-rows: 60px 70px 1fr 60px;
 
   header {
     grid-area: header;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    background-color: rgb(1, 1, 102);
 
-    height: 60 px;
-    background-color: darkblue;
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  .filter {
-    grid-area: filter;
-    background-color: #ef1f46;
-  }
+    i {
+      color: white;
+      font-size: 20px;
+    }
 
-  main {
-    grid-area: main;
-  }
+    .nav_menu {
+      list-style: none;
+    }
+    .menu_icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
 
-  footer {
-    grid-area: footer;
+    #menu {
+      display: none;
+    }
+
+    nav {
+      display: none;
+    }
   }
+}
+
+.filter {
+  grid-area: filter;
+  background-color: #a3152f;
+
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  grid-area: main;
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    background-color: whitesmoke;
+
+    img {
+      width: 200px;
+    }
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pagination_list {
+      list-style: none;
+      gap: 15px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  grid-area: footer;
+  background-color: rgb(1, 1, 102);
 }

@@ -9,25 +9,30 @@
   </head>
   <body>
     <header class="header">
-      <input type="checkbox" name="" id="menu" />
-      <label for="menu">
-        <i class="fa-solid fa-bars"></i>
-      </label>
+      <div class="logo">
+        <input type="checkbox" name="" id="menu" />
+        <label for="menu">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <img src="./assets/img/Logo.svg" alt="Logo Store" />
+      </div>
 
       <nav>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="nav_menu">
+          <li>LO MAS VENDIDO</li>
+          <li>EQUIPOS</li>
+          <li>CAPACITACIÓN</li>
+          <li>VESTIR</li>
+          <li>COSAS MEMORABLES</li>
+          <li>REGALOS Y ACCESORIOS</li>
+          <li>COMPRAS POR JUGADOR</li>
         </ul>
       </nav>
 
-      <div>
-        <img src="./assets/img/Logo.svg" alt="Logo Store" />
+      <div class="menu_icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
       </div>
     </header>
 
@@ -43,14 +48,27 @@
     </section>
 
     <main>
-      <div>
+      <div class="cards">
         <img src="./assets/img/franela1.webp" alt="Camiseta" />
-        <p></p>
-        <p></p>
+        <p>Camiseta primera equiipación LFP FC Barcelona 23/24</p>
+        <p>$150.000</p>
         <button>Agregar</button>
       </div>
+
+      <section class="pagination">
+        <ul class="pagination_list">
+          <li>&laquo</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>&raquo</li>
+        </ul>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>www.fcbarcelona.com</p>
+    </footer>
 
     <!-- script -->
     <script
