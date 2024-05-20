@@ -4,11 +4,34 @@
   box-sizing: border-box;
 }
 
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.outfit_bold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+.outfit_medium {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: large;
+}
+
 body {
   display: grid;
-  grid-template-areas: "header" "filter" "main" "footer";
+  grid-template-areas: "header" "filter" "main" "banner" "footer";
   height: 100vh;
-  grid-template-rows: 60px 70px 1fr 60px;
+  grid-template-rows: 80px 70px 1fr 30px 80px;
 }
 body header {
   grid-area: header;
@@ -16,8 +39,7 @@ body header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  height: 60px;
-  background-color: rgb(1, 1, 102);
+  background-color: rgb(1, 1, 58);
 }
 body header .logo {
   display: flex;
@@ -34,7 +56,7 @@ body header .nav_menu {
 body header .menu_icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 body header #menu {
   display: none;
@@ -42,49 +64,190 @@ body header #menu {
 body header nav {
   display: none;
 }
-
-.filter {
+body .filter {
   grid-area: filter;
-  background-color: #a3152f;
+  background-color: #7e1125;
+  color: rgba(252, 252, 0, 0.87);
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-main {
-  grid-area: main;
+body .filter #filter {
+  border: none;
+  border-radius: 3px;
 }
-main .cards {
+body main {
+  grid-area: main;
+  display: grid;
+  padding: 10px;
+  background-color: rgb(1, 1, 58);
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(200px 1fr));
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+body main .cards {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 10px;
-  gap: 10px;
+  max-width: 300px;
+  gap: 20px;
   align-items: center;
-  background-color: whitesmoke;
+  border: solid 2px gray;
+  background-color: white;
 }
-main .cards img {
+body main .cards button {
+  color: rgba(252, 252, 0, 0.87);
+  border: none;
+  width: 80px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: rgb(1, 1, 58);
+}
+body main .cards button:hover {
+  color: rgb(1, 1, 58);
+  background-color: rgba(252, 252, 0, 0.87);
+}
+body main .cards img {
   width: 200px;
+  box-shadow: 6px 6px 6px gray;
 }
-main .pagination {
+body main .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(252, 252, 0, 0.87);
 }
-main .pagination .pagination_list {
+body main .pagination .pagination_list {
   list-style: none;
-  gap: 15px;
+  gap: 5px;
   display: flex;
   flex-direction: row;
 }
-
-footer {
+body main .pagination .pagination_list li {
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+body main .pagination .pagination_list li:hover {
+  color: rgb(1, 1, 58);
+  background-color: rgba(252, 252, 0, 0.87);
+}
+body .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(1, 1, 58);
+  grid-area: banner;
+  display: flex;
+  background-color: rgba(252, 252, 0, 0.87);
+  height: 30px;
+}
+body footer {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   grid-area: footer;
-  background-color: rgb(1, 1, 102);
+  background-color: rgb(1, 1, 58);
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  body {
+    grid-template-areas: "header header header" "filter main main" "banner banner banner" "footer footer footer";
+    grid-template-rows: 80px 1fr 30px 80px;
+    grid-template-columns: 150px 1fr 1fr;
+  }
+  body header .logo i {
+    display: none;
+  }
+  body header nav {
+    display: block;
+  }
+  body header .nav_menu {
+    color: rgba(252, 252, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+  body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    display: grid;
+    padding: 10px;
+    background-color: rgb(1, 1, 58);
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow-y: auto;
+  }
+  body main .pagination {
+    display: none;
+  }
+  body .filter {
+    justify-content: start;
+    gap: 20px;
+  }
+  body .filter #filter {
+    width: 120px;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    grid-template-areas: "header filter filter" "header main main" "banner main main" "footer main main";
+    grid-template-rows: 80px 1fr 30px 80px;
+    grid-template-columns: 300px 1fr 1fr;
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 40px;
+  }
+  body header .menu_icons {
+    display: none;
+  }
+  body header .logo i {
+    display: none;
+  }
+  body header nav {
+    display: block;
+  }
+  body header .nav_menu {
+    color: rgba(252, 252, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+  }
+  body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    display: grid;
+    padding: 10px;
+    background-color: rgb(1, 1, 58);
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow-y: auto;
+  }
+  body .filter {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  body .filter #filter {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

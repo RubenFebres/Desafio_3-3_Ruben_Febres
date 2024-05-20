@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Desafio 3</title>
   </head>
-  <body>
+  <body class="outfit">
     <header class="header">
       <div class="logo">
         <input type="checkbox" name="" id="menu" />
@@ -21,11 +27,8 @@
         <ul class="nav_menu">
           <li>LO MAS VENDIDO</li>
           <li>EQUIPOS</li>
-          <li>CAPACITACIÓN</li>
           <li>VESTIR</li>
-          <li>COSAS MEMORABLES</li>
           <li>REGALOS Y ACCESORIOS</li>
-          <li>COMPRAS POR JUGADOR</li>
         </ul>
       </nav>
 
@@ -37,7 +40,7 @@
     </header>
 
     <section class="filter">
-      <label for="">Ordenar por</label>
+      <label for="">Ordenar por:</label>
       <select name="filter" id="filter">
         <option value="" selected disabled>Selecciona un filtro</option>
         <option value="1">De mayor a menor precio</option>
@@ -49,9 +52,142 @@
 
     <main>
       <div class="cards">
-        <img src="./assets/img/franela1.webp" alt="Camiseta" />
-        <p>Camiseta primera equiipación LFP FC Barcelona 23/24</p>
-        <p>$150.000</p>
+        <p class="outfit_bold">
+          Camiseta primera equipación LFP FC Barcelona 23/24
+        </p>
+        <div>
+          <img src="./assets/img/franela1.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$150.000</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">
+          Camiseta pre-partido blaugrana del FC Barcelona
+        </p>
+        <div>
+          <img src="./assets/img/franela2.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$64.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">
+          Camiseta Entrenamiento FC Barcelona granate 23/24
+        </p>
+        <div>
+          <img src="./assets/img/franela3.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$49.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta local Pre-Partido FC Barcelona 23/24</p>
+        <div>
+          <img src="./assets/img/franela4.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$64.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">
+          Camiseta visitante Pre-Partido FC Barcelona 23/24
+        </p>
+        <div>
+          <img src="./assets/img/franela5.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$65.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta Entrenamiento FC Barcelona 23/24</p>
+        <div>
+          <img src="./assets/img/franela6.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$49.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta equipación local 1981-90</p>
+        <div>
+          <img src="./assets/img/franela7.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$69.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta temporada 1995-97</p>
+        <div>
+          <img src="./assets/img/franela8.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$69.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta Capitán FC Barcelona</p>
+        <div>
+          <img src="./assets/img/franela9.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$69.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta local UCL FC Barcelona 23/24</p>
+        <div>
+          <img src="./assets/img/franela10.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$154.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Camiseta visitante UCL FC Barcelona 23/24</p>
+        <div>
+          <img src="./assets/img/franela11.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$99.990</p>
+        </div>
+        <button>Agregar</button>
+      </div>
+
+      <div class="cards">
+        <p class="outfit_bold">Polo escudo azul royal FC Barcelona Nike</p>
+        <div>
+          <img src="./assets/img/franela12.webp" alt="Camiseta" />
+        </div>
+        <div>
+          <p class="outfit_medium">$44.990</p>
+        </div>
         <button>Agregar</button>
       </div>
 
@@ -66,6 +202,11 @@
         </ul>
       </section>
     </main>
+
+    <div class="banner">
+      <p>Despacho gratis para todo Chile <i class="fa-solid fa-truck"></i></p>
+    </div>
+
     <footer>
       <p>www.fcbarcelona.com</p>
     </footer>
